@@ -10,12 +10,41 @@ namespace BackendCSharp.Controllers
 	{
 
 		[HttpGet]
-		public decimal Add(decimal a, decimal b)
+		public decimal Get(decimal a, decimal b)
 		{
 			return a + b;
 		}
 
+		[HttpPost]
+		public decimal Add(Numbers numbers, [FromHeader] string Host,
+			[FromHeader(Name ="Content-Length")] string contentLength,
+			[FromHeader(Name ="X-some")] string some)
+		{
+			Console.WriteLine(Host);
+			Console.WriteLine(contentLength);
+			Console.WriteLine(some);
+
+			return numbers.a - numbers.b;
+		}
+
+		[HttpPut]
+		public decimal Edit(decimal a, decimal b)
+		{
+			return a / b;
+		}
+
+		[HttpDelete]
+		public decimal Delete(decimal a, decimal b)
+		{
+			return a * b;
+		}
 
 	}
 }
 
+public class Numbers
+{
+	public decimal a { get; set; }
+
+	public decimal b { get; set; }
+}
