@@ -1,23 +1,29 @@
 ﻿<Properties StartupConfiguration="{A7B4855E-08AE-4A9E-8FC2-3884C2B15641}|http">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/PeopleController.cs">
+    <Files>
+      <File FileName="Program.cs" />
+      <File FileName="Controllers/OperationController.cs" Line="26" Column="1" />
+      <File FileName="Controllers/PeopleController.cs" Line="43" Column="32" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BackendCSharp">
+            <Node name="BackendCSharp">
+              <Node name="Controllers" expanded="True">
+                <Node name="PeopleController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BackendCSharp PreferredExecutionTarget="/Applications/Brave Browser.app" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/OperationController.cs">
-    <Files>
-      <File FileName="Program.cs" />
-      <File FileName="Controllers/OperationController.cs" Line="26" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__" />
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
