@@ -15,9 +15,11 @@
   <ItemGroup>
     <None Remove="Controllers\" />
     <None Remove="Services\" />
+    <None Remove="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Services\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
 </Project>
