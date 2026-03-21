@@ -1,4 +1,6 @@
 ﻿using BackendCSharp.Services;
+using BackendCSharp.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +23,14 @@ builder.Services.AddHttpClient<IPostService, PostService>( c =>
     c.BaseAddress = new Uri(builder.Configuration["BaseUrlPosts"]);
     
 });
+
+// EntityFramework -  Configurar base de datos
+builder.Services.AddDbContext<StoreContext>( options =>
+{ 
+
+    options.UseSqlServer(builder.Configuration.GetConnectionString("StoreConnection"));
+}); 
+
 
 
 builder.Services.AddControllers();
