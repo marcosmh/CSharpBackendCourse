@@ -1,23 +1,29 @@
 ﻿<Properties StartupConfiguration="{A7B4855E-08AE-4A9E-8FC2-3884C2B15641}|http">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/BeerController.cs">
     <Files>
-      <File FileName="DTOs/BeerDTO.cs" Line="10" Column="21" />
-      <File FileName="DTOs/BeerInsertDTO.cs" Line="5" Column="28" />
-      <File FileName="DTOs/BeetUpdateDTO.cs" Line="12" Column="1" />
-      <File FileName="Controllers/BeerController.cs" Line="131" Column="23" />
-      <File FileName="Models/Beer.cs" Line="13" Column="26" />
+      <File FileName="Validators/BeerInsertValidator.cs" Line="16" Column="109" />
+      <File FileName="Validators/BeerUpdateValidator.cs" Line="11" Column="77" />
+      <File FileName="Program.cs" Line="28" Column="5" />
+      <File FileName="Controllers/BeerController.cs" Line="106" Column="62" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BackendCSharp">
             <Node name="BackendCSharp">
-              <Node name="Controllers" expanded="True">
+              <Node name="Controllers">
                 <Node name="BeerController.cs" selected="True" />
               </Node>
               <Node name="DTOs" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Validators" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -25,10 +31,4 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BackendCSharp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>

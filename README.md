@@ -35,3 +35,9 @@ Nota: crear la base de datos manualmente
 * dotnet ef database update
 
 * dotnet ef migrations add AlcoholInBeer (modificacion agregando campo)
+
+
+### FluentValidation
+
+* dotnet add package FluentValidation --version 12.1.1
+

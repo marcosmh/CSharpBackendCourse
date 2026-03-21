@@ -1,7 +1,11 @@
 ﻿using BackendCSharp.Services;
 using BackendCSharp.Models;
+using BackendCSharp.DTOs;
+using BackendCSharp.Validators;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using FluentValidation;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,9 +31,12 @@ builder.Services.AddHttpClient<IPostService, PostService>( c =>
 // EntityFramework -  Configurar base de datos
 builder.Services.AddDbContext<StoreContext>( options =>
 { 
-
     options.UseSqlServer(builder.Configuration.GetConnectionString("StoreConnection"));
-}); 
+});
+
+// Validadores
+builder.Services.AddScoped<IValidator<BeerInsertDTO>, BeerInsertValidator>();
+builder.Services.AddScoped<IValidator<BeerUpdateDTO>, BeerUpdateValidator>();
 
 
 
