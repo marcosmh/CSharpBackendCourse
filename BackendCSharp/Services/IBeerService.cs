@@ -10,7 +10,7 @@ namespace BackendCSharp.Services
 
         Task<BeerDTO> GetById(int id);
 
-        Task<BeerInsertDTO> Add(BeerInsertDTO dto);
+        Task<BeerDTO> Add(BeerInsertDTO dto);
 
         Task<BeerDTO> Update(int id, BeerUpdateDTO dto);
 
