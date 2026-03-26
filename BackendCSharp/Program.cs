@@ -3,6 +3,7 @@ using BackendCSharp.Models;
 using BackendCSharp.DTOs;
 using BackendCSharp.Validators;
 using BackendCSharp.Repository;
+using BackendCSharp.AutoMappers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
@@ -46,6 +47,8 @@ builder.Services.AddDbContext<StoreContext>( options =>
 builder.Services.AddScoped<IValidator<BeerInsertDTO>, BeerInsertValidator>();
 builder.Services.AddScoped<IValidator<BeerUpdateDTO>, BeerUpdateValidator>();
 
+// Mappers
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 
 builder.Services.AddControllers();

@@ -1,24 +1,18 @@
 ﻿<Properties StartupConfiguration="{A7B4855E-08AE-4A9E-8FC2-3884C2B15641}|http">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.BackendCSharp PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Services/BeerService.cs">
     <Files>
-      <File FileName="Program.cs" Line="36" Column="1" />
+      <File FileName="Program.cs" Line="6" Column="33" />
       <File FileName="Controllers/BeerController.cs" Line="32" Column="10" />
-      <File FileName="Repository/IRepository.cs" Line="14" Column="37" />
-      <File FileName="Services/BeerService.cs" Line="88" Column="1" />
-      <File FileName="Repository/BeerRepository.cs" Line="20" Column="51" />
+      <File FileName="AutoMappers/MappingProfile.cs" Line="16" Column="36" />
+      <File FileName="Services/BeerService.cs" Line="65" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BackendCSharp">
+          <Node name="BackendCSharp" expanded="True">
             <Node name="BackendCSharp">
+              <Node name="AutoMappers" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="DTOs" expanded="True" />
               <Node name="Models" expanded="True" />
@@ -33,4 +27,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BackendCSharp PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
