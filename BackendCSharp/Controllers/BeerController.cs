@@ -18,8 +18,6 @@ namespace BackendCSharp.Controllers
     public class BeerController : ControllerBase
     {
 
-        private StoreContext _context;
-
         private IValidator<BeerInsertDTO> _beerInsertValidator;
 
         private IValidator<BeerUpdateDTO> _beerUpdateValidator;
@@ -27,12 +25,11 @@ namespace BackendCSharp.Controllers
         private ICommonService<BeerDTO,BeerInsertDTO,BeerUpdateDTO> _beerService;
 
 
-        public BeerController(StoreContext context,
+        public BeerController(
             IValidator<BeerInsertDTO> beerInsertValidator,
             IValidator<BeerUpdateDTO> beerUpdateValidator,
            [FromKeyedServices("beerService")] ICommonService<BeerDTO, BeerInsertDTO, BeerUpdateDTO> beerService)
         {
-            _context = context;
             _beerInsertValidator = beerInsertValidator;
             _beerUpdateValidator = beerUpdateValidator;
             _beerService = beerService;
