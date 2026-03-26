@@ -1,25 +1,31 @@
 ﻿<Properties StartupConfiguration="{A7B4855E-08AE-4A9E-8FC2-3884C2B15641}|http">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.BackendCSharp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/BeerController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/BeerService.cs">
     <Files>
-      <File FileName="Program.cs" Line="11" Column="1" />
-      <File FileName="Controllers/BeerController.cs" Line="33" Column="43" />
-      <File FileName="Services/ICommonService.cs" Line="10" Column="33" />
-      <File FileName="Services/BeerService.cs" Line="11" Column="85" />
-      <File FileName="DTOs/BeerDTO.cs" Line="4" Column="15" />
+      <File FileName="Program.cs" Line="36" Column="1" />
+      <File FileName="Controllers/BeerController.cs" Line="32" Column="10" />
+      <File FileName="Repository/IRepository.cs" Line="14" Column="37" />
+      <File FileName="Services/BeerService.cs" Line="88" Column="1" />
+      <File FileName="Repository/BeerRepository.cs" Line="20" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BackendCSharp">
             <Node name="BackendCSharp">
-              <Node name="Controllers">
-                <Node name="BeerController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="DTOs" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="Services">
+                <Node name="BeerService.cs" selected="True" />
+              </Node>
               <Node name="Validators" expanded="True" />
             </Node>
           </Node>
@@ -27,7 +33,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

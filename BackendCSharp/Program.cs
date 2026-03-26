@@ -2,6 +2,7 @@
 using BackendCSharp.Models;
 using BackendCSharp.DTOs;
 using BackendCSharp.Validators;
+using BackendCSharp.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
@@ -29,6 +30,11 @@ builder.Services.AddHttpClient<IPostService, PostService>( c =>
     c.BaseAddress = new Uri(builder.Configuration["BaseUrlPosts"]);
     
 });
+
+// Repository
+builder.Services.AddScoped<IRepository<Beer>, BeerRepository>();
+
+
 
 // EntityFramework -  Configurar base de datos
 builder.Services.AddDbContext<StoreContext>( options =>

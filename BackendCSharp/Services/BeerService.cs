@@ -1,6 +1,7 @@
 ﻿using System;
 using BackendCSharp.DTOs;
 using BackendCSharp.Models;
+using BackendCSharp.Repository;
 using BackendCSharp.Services;
 using BackendCSharp.Validators;
 using Microsoft.EntityFrameworkCore;
@@ -10,28 +11,35 @@ namespace BackendCSharp.Services
 {
     public class BeerService : ICommonService<BeerDTO, BeerInsertDTO, BeerUpdateDTO>
     {
-        private StoreContext _context;
 
-        public BeerService(StoreContext context)
+        private IRepository<Beer> _beerRepository;
+
+
+
+        public BeerService(IRepository<Beer> beerRepository)
         {
-            _context = context;
+            _beerRepository = beerRepository;
         }
 
 
-        public async Task<IEnumerable<BeerDTO>> Get() =>
-            await _context.Beers.Select(b => new BeerDTO
+        public async Task<IEnumerable<BeerDTO>> Get()
+        {
+            var beers = await _beerRepository.Get();
+
+            return beers.Select( b => new BeerDTO()
             {
                 Id = b.BeerID,
                 Name = b.Name,
-                Alcohol = b.Alcohol,
-                BrandID = b.BrandID
-            }).ToListAsync();
+                BrandID = b.BrandID,
+                Alcohol = b.Alcohol
 
+            });
+        }
 
-
+           
         public async Task<BeerDTO> GetById(int id)
         {
-            var beer = await _context.Beers.FindAsync(id);
+            var beer = await _beerRepository.GetById(id);
 
             if(beer != null)
             {
@@ -57,8 +65,8 @@ namespace BackendCSharp.Services
                 Alcohol = dto.Alcohol
             };
 
-            await _context.Beers.AddAsync(beer);
-            await _context.SaveChangesAsync();
+            await _beerRepository.Add(beer);
+            await _beerRepository.Save();
 
             var beerDto = new BeerDTO
             {
@@ -74,14 +82,17 @@ namespace BackendCSharp.Services
 
         public async Task<BeerDTO> Update(int id, BeerUpdateDTO dto)
         {
-            var beer = await _context.Beers.FindAsync(id);
+            var beer = await _beerRepository.GetById(id);
+                
 
             if(beer != null)
             {
                 beer.Name = dto.Name;
                 beer.Alcohol = dto.Alcohol;
-                beer.BrandID = beer.BrandID;
-                await _context.SaveChangesAsync();
+                beer.BrandID = dto.BrandId;
+                
+                _beerRepository.Update(beer);
+                await _beerRepository.Save();
 
                 var beerDto = new BeerDTO
                 {
@@ -101,7 +112,7 @@ namespace BackendCSharp.Services
         public async Task<BeerDTO> Delete(int id)
         {
 
-            var beer = await _context.Beers.FindAsync(id);
+            var beer = await _beerRepository.GetById(id);
 
             if (beer != null)
             {
@@ -114,8 +125,8 @@ namespace BackendCSharp.Services
 
                 };
 
-                _context.Remove(beer);
-                await _context.SaveChangesAsync();
+                _beerRepository.Delete(beer);
+                await _beerRepository.Save();
 
                 return beerDto;
             }
