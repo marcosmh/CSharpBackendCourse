@@ -57,20 +57,26 @@ namespace BackendCSharp.Controllers
         }
     }
 
-}
 
 
-public class Repository
-{
-    public static List<People> People = new List<People>
+
+    public class Repository
+    {
+        public static List<People> People = new List<People>
     {
         new People() { Id=1, Name="Anakin", BirthDate= new DateTime(1970,03,01) },
         new People() { Id=2, Name="Luke", BirthDate= new DateTime(1990,03,01) },
         new People() { Id=3, Name="Obi Wan", BirthDate= new DateTime(1960,06,22) },
         new People() { Id=4, Name="Leia", BirthDate= new DateTime(1990,03,01) }
     };
-}
+    }
 
+
+    
+
+
+
+}
 
 public class People
 {
@@ -81,5 +87,6 @@ public class People
     public DateTime BirthDate { get; set; }
 
 }
+
 
 
