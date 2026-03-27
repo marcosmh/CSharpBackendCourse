@@ -41,3 +41,6 @@ Nota: crear la base de datos manualmente
 
 * dotnet add package FluentValidation --version 12.1.1
 
+### AutoMapper
+
+* dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
