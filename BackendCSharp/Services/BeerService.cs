@@ -17,12 +17,14 @@ namespace BackendCSharp.Services
 
         private IMapper _mapper;
 
+        public List<string> Errors { get; }
 
 
         public BeerService(IRepository<Beer> beerRepository, IMapper mapper)
         {
             _beerRepository = beerRepository;
             _mapper = mapper;
+            Errors = new List<string>();
         }
 
 
@@ -99,7 +101,30 @@ namespace BackendCSharp.Services
 
         }
 
-      
+        public bool Validate(BeerInsertDTO dto)
+        {
+            if(_beerRepository.Search( b => b.Name == dto.Name ).Count() > 0 )
+            {
+                Errors.Add("No puede existir una cerveza con el mismo nombre ya existente.");
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool Validate(BeerUpdateDTO dto)
+        {
+            if (_beerRepository.Search(b => b.Name == dto.Name
+                && dto.Id != b.BeerID ).Count() > 0)
+            {
+                Errors.Add("No puede existir una cerveza con el mismo nombre ya existente.");
+                return false;
+            }
+
+            return true;
+        }
+
+        
     }
 }
 
